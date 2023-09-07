@@ -1,15 +1,14 @@
-import { BrowserRouter, Route, Routes as Switch, Navigate } from "react-router-dom";
+// Configurar todas as rotas da nossa aplicacao 
 
-import { Dashboard, Login } from "../pages";
+import { BrowserRouter, Route, Routes as Switch, Navigate } from "react-router-dom"
+import { Dashboard } from "../pages";
 
 export const Routes = () => {
   return (
     <BrowserRouter>
       <Switch>
-        <Route path="/entrar" element={<Login />} />
-        <Route path="/pagina-inicial" element={<Dashboard />} />
-
-        <Route path="*" element={<Navigate to="/pagina-inicial" />} />
+      <Route path="/pagina-inicial" element={<Dashboard />} />
+      <Route path="*" element={<Navigate to="/pagina-inicial" />} />
       </Switch>
     </BrowserRouter>
   );
